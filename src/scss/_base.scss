@@ -1,0 +1,43 @@
+body{
+  // background-image: url("../img/bg.png") center top/cover;
+  font-family: $mainFont;
+  color: #fff;
+}
+._wrapper {
+	min-height: 100%;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+}
+._container{
+  width: $maxWidth;
+  margin: 0 auto;
+  background-color: #182948;
+  background-image: url("@img/bg.png") center bottom/cover;
+
+  @media(max-width: $maxWidth){
+    width: 100%;
+    padding: 0 23px;
+  }
+}
+._ibg{
+  position: relative;
+  img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+
+

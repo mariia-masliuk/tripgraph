@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include("html/blocks/head.html",{
+    "title": "My Document"
+  })
+  <body>
+    <div class="_wrapper">
+      <!-- <div class="_container"> -->
+        <div class="dashboard__grid">
+          @@include("html/blocks/header.html", {})
+          @@include("html/blocks/nav.html", {"active": "trips"})
+          @@include("html/blocks/avatar.html", {})
+          @@include("html/pages/dashboard.html", {})
+        </div>
+        
+      <!-- </div> -->
+    </div>
+
+
+    @@include("html/blocks/script.html", {})
+    
+  </body>
+</html>
+

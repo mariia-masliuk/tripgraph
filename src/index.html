@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include("html/blocks/head.html",{
+    "title": "My Document"
+  })
+  <body>
+    <div class="_wrapper">
+      <div class="index__container">
+        <div class="index__logo"><img src="@img/start-logo.png" alt=""></div>
+        <div class="index__form">
+          <form action="#" id="register_frm" method="post">
+            <div class="index__input">
+              <input type="email" required placeholder="input your email">
+            </div>
+            <div class="index__btn">
+              <input type="submit" value="Register">
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+
+
+    @@include("html/blocks/script.html", {})
+    
+  </body>
+</html>
