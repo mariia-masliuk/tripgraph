@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,regular,500,700&display=swap);
 @font-face {
   font-family: "icons";
@@ -992,6 +993,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: linear-gradient(to right, #1a2e4a 0%, rgba(39, 53, 71, 0) 40%), linear-gradient(to left, #1a2e4a 0%, rgba(39, 53, 71, 0) 40%);
+  pointer-events: none;
 }
 .places__title {
   position: absolute;
@@ -1000,41 +1002,13 @@ body {
   z-index: 3;
 }
 .places__gallery {
-  position: absolute;
-  top: 28px;
-  left: 0px;
-  z-index: 1;
+  padding: 28px 0;
 }
 
 .header__title {
   color: #fff;
 }
 
-.gallery__content {
-  width: 536px;
-  height: 336px;
-  overflow: hidden;
-}
-@media (max-width: 765px) {
-  .gallery__content {
-    width: 100%;
-  }
-}
-.gallery__row {
-  display: flex;
-  margin: 0 -15px;
-  padding: 0 180px;
-  transform: translateX(-200px);
-}
-.gallery__column {
-  padding: 0 15px;
-}
-.gallery__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .gallery__image {
   margin-bottom: 14px;
 }
@@ -1065,6 +1039,96 @@ body {
   width: 100%;
   border-radius: 16px;
   line-height: 2;
+}
+.gallery__btn:hover {
+  color: #6f91bf;
+  border: 1px solid #fff;
+  background-color: #6f91bf;
+  color: #fff;
+}
+
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  z-index: 10;
+  font-size: 0;
+  width: 30px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.slider .slick-arrow.slick-prev {
+  left: 0;
+  background: url("../img/icons/arrow_l.svg") 0 0/100% no-repeat;
+}
+
+.slider .slick-arrow.slick-next {
+  right: 0;
+  background: url("../img/icons/arrow_r.svg") 0 0/100% no-repeat;
+}
+
+.slider .slick-arrow.slick-disabled {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider .slick-dots li {
+  margin: 0 10px;
+  list-style: none;
+}
+
+/* Активная точка */
+.slider .slick-dots li.slick-active button {
+  background-color: #fff;
+}
+
+/* Элемент точки */
+.slider .slick-dots li button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.slider__item {
+  text-align: center;
+  opacity: 0.7;
+  transition: all 0.3s ease 0s;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.slider__item.slick-center {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .dashboard__favorite {
